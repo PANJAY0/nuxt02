@@ -1,5 +1,72 @@
 @import 'tailwindcss';
 
 @theme {
+    --color-primary: #2c6084;
+    --color-primary-light: #48799e;
+    --color-primary-lighter: #e5f1ff;
+    --color-primary-inverse: #9bccf5;
+    
+    --color-secondary-dark: #392600;
+    --color-secondary: #e7a900;
+    --color-secondary-light: #ffeed6;
+
+    --color-danger: #ba1a1a;
+    --color-danger-light: #ffdad6;
+
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-5xl: 2.75;
+
+    /**/
+    --color-font-muted-color: #71787f;
+}
+
+@layer base {
+  body {
+    font-family: 'Roboto', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'sans-serif';
+  }
+  a {
+    @apply focus-visible:ring-primary rounded-sm focus-visible:ring-3 focus-visible:ring-offset-2 focus-visible:outline-0;
+  }
+  button {
+    @apply focus-visible:ring-primary rounded-sm focus-visible:ring-3 focus-visible:ring-offset-2 focus-visible:outline-0;
+    
+  }
+}
+
+@layer components{
+    .btn {
+        @apply inline-flex h-[48px] cursor-pointer justify-center items-center border-0 px-8 py-4 text-[18px] rounded-full text-black;
+        @apply disabled:text-font-muted-color disabled:cursor-not-allowed disabled:border-0 disabled:bg-[#C1C7CF];
+    }
+    .btn--sm{
+        @apply text-[16px] px-6 py-2
+    }
+    .btn--lg{
+        @apply text-[22px] px-10 py-6 h-[60px]
+    }
+
+    .btn--secondary{
+        @apply bg-secondary text-secondary-dark border-transparent
+    }
+
+    .btn--secondary--outline{
+        @apply bg-white text-secondary-dark border-secondary border-2
+    }
+    
+    .btn--primary{
+        @apply bg-primary text-[#fcfcff] border-transparent
+    }
+
+    .btn--primary--inverse{
+        @apply bg-primary-inverse text-black border-primary border-2
+    }
+
+    .btn--primary--outline{
+        @apply bg-white text-black border-primary border-2
+    }
+
+
 
 }
+

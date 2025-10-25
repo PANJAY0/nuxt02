@@ -6,12 +6,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   vite: {
-      plugins: [tailwindcss()],
-    },
+    plugins: [tailwindcss()],
+  },
 
   typescript: {
-        typeCheck: true,
-    },
+    typeCheck: true,
+  },
 
   modules: ['@nuxt/eslint'],
 })
