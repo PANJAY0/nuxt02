@@ -1,6 +1,7 @@
 <script setup>
 import rightIcon from '@/assets/icons/arrow-right-small.svg'
 import member from '@/assets/icons/member.svg'
+import CommonStep from '~/components/CommonStep.vue'
 
 const errorMsg = ref('')
 const inputRef = ref(null)
@@ -9,6 +10,7 @@ const a = () => {
   inputRef.value?.focus()
 }
 const optionResult = ref(['選項A', '選項B', '選項C'])
+const steps = [{ title: '步驟1', content: '說明1' }, { title: '步驟2', content: '說明2' }, { title: '步驟3', content: '說明3' }]
 </script>
 <template>
   <div class="flex justify-around">
@@ -21,6 +23,8 @@ const optionResult = ref(['選項A', '選項B', '選項C'])
       <CommonInput ref="inputRef" :error-msg="errorMsg" type="password" title="aaa"/>
       <br>
       <CommonSelect error-msg="" :options="optionResult"/>
+      <br>
+      <CommonStep :steps="steps" current-step="2"/>
     </div>
   </div>
 </template>
