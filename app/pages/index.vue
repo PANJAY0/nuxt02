@@ -8,6 +8,7 @@ const inputRef = ref(null)
 const a = () => {
   inputRef.value?.focus()
 }
+const optionResult = ref(['選項A', '選項B', '選項C'])
 </script>
 <template>
   <div class="flex justify-around">
@@ -17,7 +18,9 @@ const a = () => {
         Button
       </CommonButton>
       <br>
-      <CommonInput ref="inputRef" :error-msg="errorMsg" type="radio" title="aaa"/>
+      <CommonInput ref="inputRef" :error-msg="errorMsg" type="password" title="aaa"/>
+      <br>
+      <CommonSelect error-msg="" :options="optionResult"/>
     </div>
   </div>
 </template>
