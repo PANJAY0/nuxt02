@@ -10,7 +10,6 @@ const isCompleted = (index) => {
 }
 
 const isActive = (index) => {
-  console.log('aaa', index)
   return index + 1 === props.currentStep
 }
 </script>
@@ -23,9 +22,9 @@ const isActive = (index) => {
 v-else
                 class="border rounded-full h-8 w-8 flex items-center justify-center font-semibold"
                 :class="isActive(index)? 'border-primary-light text-primary': 'border-font-muted-color text-shadow-font-muted-color'">
-                    {{ ++index }}
+                    {{ index + 1  }}
                 </div>
-                <div class=" bg-font-muted-color h-8 w-[1px]"/>
+                <div v-if="index !== steps.length-1" class=" bg-font-muted-color h-8 w-[1px]"/>
             </div>
             <div>
                 <div class=" text-font-color mt-1 font-semibold"> {{ item.title }}</div>
