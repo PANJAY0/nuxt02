@@ -34,6 +34,8 @@ const pathItems = [
       <CommonSelect error-msg="" :options="optionResult"/>
       <br>
       <CommonStep :steps="steps" current-step="2"/>
+      <br>
+      <CommonBack/>
     </div>
   </div>
 </template>

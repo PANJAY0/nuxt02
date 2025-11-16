@@ -47,9 +47,9 @@ const classResult = computed(() => {
 })
 </script>
 <template>
-    <div>
-        <button class="btn" :class="classResult" :disabled="props.disabled" type="button">
-            <slot/>
-        </button>
-    </div>
+
+    <button class="btn" :class="classResult" :disabled="props.disabled" type="button">
+        <slot/>
+    </button>
+
 </template>
